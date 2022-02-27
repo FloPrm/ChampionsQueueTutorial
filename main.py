@@ -7,8 +7,8 @@ from graphs import champions_pie_graph, champions_bar_graph, teammates_pie_graph
 
 
 def main():
-    st.set_page_config(page_title="Challenger Queue Data", layout='wide')
-    st.title('Challenger Queue Analysis')
+    st.set_page_config(page_title="Champions Queue Data", layout='wide')
+    st.title('Champions Queue Analysis')
 
     # Get all of the Champions Queue data
     leaderboard = get_leaderboards()
@@ -23,7 +23,7 @@ def main():
 
     number_of_games = player_data['wins'] + player_data['losses']
     st.write(player_data['name'], ' played a total of ', str(
-        number_of_games), " games on the Challenger Queue")
+        number_of_games), " games on the Champions Queue")
 
     # get all of the matches as a dataframe
     matches_df = pd.DataFrame(matches['matches'])
